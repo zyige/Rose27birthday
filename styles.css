@@ -1,3 +1,4 @@
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,6 +16,9 @@ nav {
   background: #fcbfd7;
   padding: 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -33,13 +37,28 @@ h1 {
 
 .section {
   min-height: 100vh;
-  padding: 120px 20px;
+  padding: 30px 20px;
+}
+
+/* let letter and soulmate shrink to content so they sit closer */
+#letter, #soulmate {
+  min-height: auto;
+}
+
+/* remove extra whitespace between those two specifically */
+#letter {
+  padding-bottom: 60px;
+}
+#soulmate {
+  padding-top: 60px;
 }
 
 .slideshow {
   position: relative;          /* establish a stacking context */
   margin: 0 auto;              /* centre on the page */
   overflow: visible; 
+  max-width: 90vw;           /* don't exceed viewport on mobile */
+  height: auto;
 }
 
 .slide {
@@ -54,6 +73,8 @@ h1 {
   box-shadow: 0 0 12px rgba(255, 200, 220, 0.8);
   opacity: 0;
   transition: opacity 1s;
+   max-width: 100%;
+/*max-height: 70vh;          /* optional cap so tall images don’t grow past screen */
 }
 
 .slide.active {
@@ -94,7 +115,7 @@ h1 {
 }
 
 .letter {
-  max-width: 600px;
+  max-width: 90vw;            /* flex with viewport */
   margin: auto;
   background: #fffdf8;
   padding: 60px 50px;
@@ -148,11 +169,6 @@ button {
   display: none;
 }
 
-#shrug {
-  width: 150px;
-  margin-top: 20px;
-}
-
 /* Soulmate section layout */
 .soulmate-section {
   display: flex;
@@ -188,12 +204,14 @@ button {
   flex-direction: column;
 }
 
-/* Image styling */
 #shrug {
   width: fit-content;
   height: fit-content;
-  margin-bottom: 20px;
+  margin: 20px auto 20px;
   display: block;
+  /* no absolute positioning so it stays in document flow */
+  max-width: 100%;
+  max-height: 70vh;    /* optional cap so tall images don’t grow past screen */
 }
 
 /* Hide sadness button */
@@ -208,6 +226,7 @@ button {
   cursor: pointer;
   box-shadow: 0 6px 15px rgba(180, 150, 220, 0.5);
   margin-top: 30px;
+  display: block;
 }
 
 .hide-btn:hover {
@@ -251,5 +270,14 @@ button {
   
   .letter {
     padding: 40px 25px;
+  }
+
+    #shrug {
+    width: 25vw;
+    max-width: 120px;
+  }
+  .hide-btn {
+    padding: 10px 20px;
+    font-size: 12px;
   }
 }
