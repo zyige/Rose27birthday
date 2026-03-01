@@ -258,7 +258,7 @@ button {
   to { opacity: 1; }
 }
 
-/* Mobile responsiveness - minimal, fluid design */
+/* Mobile responsiveness - minimal, fluid design
 @media (max-width: 768px) {
   .section {
     padding: 80px 15px;
@@ -272,13 +272,13 @@ button {
     padding: 40px 25px;
   }
 
-  /*   #shrug {
+ #shrug {
     width: 25vw;
     max-width: 120px;
-  } */
+  }
   
   .hide-btn {
     padding: 10px 20px;
     font-size: 12px;
-  }
+  }*/
 }
