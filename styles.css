@@ -57,7 +57,7 @@ h1 {
   position: relative;          /* establish a stacking context */
   margin: 0 auto;              /* centre on the page */
   overflow: visible; 
-  max-width: 90vw;           /* don't exceed viewport on mobile */
+  /* max-width: 90vw;           /* don't exceed viewport on mobile */
   height: auto;
 }
 
@@ -272,10 +272,11 @@ button {
     padding: 40px 25px;
   }
 
-    #shrug {
+  /*   #shrug {
     width: 25vw;
     max-width: 120px;
-  }
+  } */
+  
   .hide-btn {
     padding: 10px 20px;
     font-size: 12px;
