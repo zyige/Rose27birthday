@@ -23,6 +23,6 @@
 
 1. Done - Resize slideshow to fit across row / add new images
 2. Done - Complete letter text
-3. Open - Refine colour scheme
+3. Done - Refine colour scheme
 4. Open - Format for mobile
 5. Open - Add background music
