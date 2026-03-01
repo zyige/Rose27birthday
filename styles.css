@@ -13,7 +13,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #ffe4ef;
+  background: #fcbfd7;
   padding: 10px;
   text-align: center;
 }
@@ -38,31 +38,36 @@ h1 {
 }
 
 .slideshow {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
+  position: relative;          /* establish a stacking context */
+  margin: 0 auto;              /* centre on the page */
+  overflow: visible; 
 }
 
 .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* optional, keeps images from stretching */
   border: 10px solid #fff;
   border-radius: 20px;
   box-shadow: 0 0 12px rgba(255, 200, 220, 0.8);
   opacity: 0;
   transition: opacity 1s;
-transform: rotate(-2deg);
 }
 
 .slide.active {
   opacity: 1;
+  z-index: 1;
 }
 
 .slide:nth-child(2) {
-  transform: rotate(2deg);
+  transform: rotate(-2deg);
 }
 
 .slide:nth-child(3) {
-  transform: rotate(-2deg);
+  transform: rotate(2deg);
 }
 
 .slide:nth-child(4) {
@@ -75,6 +80,18 @@ transform: rotate(-2deg);
 
 .slide:nth-child(6) {
   transform: rotate(-2deg);
+}
+
+.slide:nth-child(7) {
+  transform: rotate(2deg);
+}
+
+.slide:nth-child(8) {
+  transform: rotate(-2deg);
+}
+
+.slide:nth-child(10) {
+  transform: rotate(2deg);
 }
 
 .letter {
@@ -110,6 +127,8 @@ transform: rotate(-2deg);
 .letter p {
   color: #3b2f2f;
   letter-spacing: 0.5px;
+  text-indent: 2em;
+  white-space: pre-wrap;
 }
 
 .letter p span {
